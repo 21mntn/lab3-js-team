@@ -135,11 +135,17 @@
 
 				<div id="skrypty">
 					<h3>Zadanie 1 – ładowanie skryptów</h3>
-					<script src="js/imie.js"></script> 
+					<script src="js/imie.js" defer></script> 
 					<!-- a) gdy pojawia się okno prompt, nie widać strony tylko wyświetla się okienko w którym naley wpisać imie -->
-					<script src="js/powitanie.js"></script>
+					<script src="js/powitanie.js" defer></script>
 					<!-- b)  Powitanie wyswietla sie pod zadaniem 1 - ładowanie skryptów-->
-					<!-- Osoba A: kod zadania 1 -->
+					<p>
+						Wnioski: Bez niczego skrypty zatrzymują ładowanie strony, dlatego najpierw wyskakuje prompt, a strony jeszcze nie widać
+						i #quiz wychodzi null. Z <code>defer</code> strona ładuje się cała, a skrypty odpalają się dopiero na końcu po kolei,
+						więc #quiz już jest. Z <code>async</code> skrypty odpalają się, jak tylko się pobiorą, więc kolejność może się pomieszać.
+						<code>document.write</code> działa tylko w trakcie wczytywania strony, a przy <code>defer</code> i <code>async</code>
+						jest już za późno, więc przeglądarka go po prostu olewa.
+					</p>
 				</div>
 				<div id="tablice">
 					<h3>Zadania 2 i 3 – tablice</h3>
