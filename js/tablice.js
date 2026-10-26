@@ -14,7 +14,8 @@ console.log(tablica.length);
 tablica.push('nowy8' , 'nowy9' , 'nowy10' , 'nowy11');
 console.log(tablica.length);
 
-tablica[20] = 'daleko';
-console.log(tablica.length);
-console.log(tablica[15]);
-// po dodaniu tablica[20] dlugosc tablicy jest równa 21 a przy wieswietleniu 15-tego indexu wartość jest niezdefiniowana
+const nowaDlugosc = tablica.unshift('nowy12', 'nowy13');
+console.log(nowaDlugosc);
+
+document.write('<p>Tablica: ' + tablica.join(', '));
+document.write(' (elementów: ' + tablica.length + ')</p>');
