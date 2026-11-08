@@ -28,3 +28,17 @@ document.write('<p>Ostatni element to <strong>' +  nowaTablica[nowaTablica.lengt
 
 nowaTablica.unshift('Motor');
 document.write('<p>Nowy pierwszy element to : <strong>' + nowaTablica[0] + '</strong></p>');
+
+
+const oceny = [
+ ['JavaScript', 5],
+ ['Git', 4],
+ ['HTML', 5]
+];
+
+// Pobieramy nazwę i ocenę drugiego elementu (indeks 1)
+const nazwaDrugiego = oceny[1][0]; // 'Git'
+const ocenaDrugiego = oceny[1][1]; // 4
+
+// Wypisujemy wynik na stronie
+document.write(`<p>Drugi element to: <strong>${nazwaDrugiego}</strong> z oceną: <strong>${ocenaDrugiego}</strong></p>`);
