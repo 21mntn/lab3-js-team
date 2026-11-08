@@ -20,3 +20,27 @@ if (akapitLicznik) {
     • Akapity wewnątrz sekcji #projekt1: <strong>${akapityProjekt1}</strong>
   `;
 }
+
+const naglowekDom = document.querySelector('#dom h2');
+
+if (naglowekDom) {
+  naglowekDom.textContent = '3. Manipulacja drzewem DOM';
+  naglowekDom.classList.add('text-success');
+}
+
+const listaDom = document.getElementById('lista');
+
+if (listaDom) {
+  // Statystyki do wstawienia do listy (3 wybrane wartości)
+  const daneDoListy = [
+    `Liczba formularzy w całym dokumencie: ${iloscFormularzy}`,
+    `Liczba obrazków w całym dokumencie: ${iloscObrazkow}`,
+    `Liczba odnośników w całym dokumencie: ${iloscOdnosnikow}`
+  ];
+
+  daneDoListy.forEach(tekst => {
+    const li = document.createElement('li');
+    li.textContent = tekst;
+    listaDom.append(li);
+  });
+}
